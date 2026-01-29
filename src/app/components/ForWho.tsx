@@ -1,5 +1,6 @@
 import { Rocket, Building, Globe, Lightbulb } from "lucide-react";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
+import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 
 export default function ForWho() {
@@ -69,49 +70,58 @@ export default function ForWho() {
         </ScrollAnimation>
 
         {/* Target Audience Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
-          {targetAudience.map((target, index) => {
-            const Icon = target.icon;
-            return (
-              <ScrollAnimation key={index} delay={index * 0.1}>
-                <div className="group relative h-full">
-                  {/* Glow Effect */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${target.color} rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
-                  ></div>
-
-                  {/* Card */}
-                  <div className="relative h-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl p-8 rounded-3xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
+        <div className="mb-20">
+          <ScrollStack
+            useWindowScroll
+            className="overflow-visible"
+            
+          >
+            {targetAudience.map((target, index) => {
+              const Icon = target.icon;
+              return (
+                <ScrollStackItem
+                  key={index}
+                  itemClassName="h-auto p-0 my-6 shadow-none bg-transparent rounded-none"
+                >
+                  <div className="group relative h-full">
+                    {/* Glow Effect */}
                     <div
-                      className={`w-20 h-20 bg-gradient-to-br ${target.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <Icon className="w-10 h-10 text-white" />
-                    </div>
-                    <h3 className="text-2xl md:text-3xl mb-4 text-white font-semibold">
-                      {target.title}
-                    </h3>
-                    <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                      {target.description}
-                    </p>
+                      className={`absolute inset-0 bg-gradient-to-br ${target.color} rounded-3xl blur-2xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
+                    ></div>
 
-                    {/* Benefits */}
-                    <div className="space-y-2">
-                      {target.benefits.map((benefit, i) => (
-                        <div key={i} className="flex items-center gap-3">
-                          <div
-                            className={`w-1.5 h-1.5 bg-gradient-to-r ${target.color} rounded-full`}
-                          ></div>
-                          <span className="text-sm text-slate-400">
-                            {benefit}
-                          </span>
-                        </div>
-                      ))}
+                    {/* Card */}
+                    <div className="relative h-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl p-8 rounded-3xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
+                      <div
+                        className={`w-20 h-20 bg-gradient-to-br ${target.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <Icon className="w-10 h-10 text-white" />
+                      </div>
+                      <h3 className="text-2xl md:text-3xl mb-4 text-white font-semibold">
+                        {target.title}
+                      </h3>
+                      <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                        {target.description}
+                      </p>
+
+                      {/* Benefits */}
+                      <div className="space-y-2">
+                        {target.benefits.map((benefit, i) => (
+                          <div key={i} className="flex items-center gap-3">
+                            <div
+                              className={`w-1.5 h-1.5 bg-gradient-to-r ${target.color} rounded-full`}
+                            ></div>
+                            <span className="text-sm text-slate-400">
+                              {benefit}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </ScrollAnimation>
-            );
-          })}
+                </ScrollStackItem>
+              );
+            })}
+          </ScrollStack>
         </div>
 
         {/* Visual Section with Blockchain Image */}

@@ -149,11 +149,11 @@ export default function Hero() {
                 />
                 -
                 <CountUp
-                  from={10}
+                  from={20}
                   to={50}
                   separator=","
                   direction="up"
-                  duration={1}
+                  duration={3}
                   className="count-up-text"
                 />
                 %
