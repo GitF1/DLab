@@ -48,7 +48,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
                 <ImageWithFallback
                   src="/assets/img/beach.jpg"
                   alt="Gallery 1"
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                 />
               </div>
             </ScrollAnimation>
@@ -59,7 +59,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
                   <ImageWithFallback
                     src="/assets/img/bridge.jpg"
                     alt="Gallery 2"
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                   />
                 </div>
               </ScrollAnimation>
@@ -69,7 +69,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
                   <ImageWithFallback
                     src="/assets/img/city.jpg"
                     alt="Gallery 3"
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                   />
                 </div>
               </ScrollAnimation>
@@ -83,7 +83,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
               <ImageWithFallback
                 src="/assets/img/high.png"
                 alt="Gallery 4"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
               />
             </div>
           </ScrollAnimation>
@@ -94,7 +94,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
               <ImageWithFallback
                 src="/assets/img/high.png"
                 alt="Gallery 4"
-                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
               />
             </div>
           </ScrollAnimation>
@@ -107,7 +107,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
                 <ImageWithFallback
                   src="/assets/img/bridge.jpg"
                   alt="Gallery 5"
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                 />
               </div>
             </ScrollAnimation>
@@ -117,7 +117,7 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
                 <ImageWithFallback
                   src="/assets/img/city.jpg"
                   alt="Gallery 6"
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 rounded-2xl"
                 />
               </div>
             </ScrollAnimation>
