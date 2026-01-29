@@ -118,7 +118,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             <a href="#contact">
-              <button className="group  cursor-pointer bg-cyan-500  text-white px-10 py-5 rounded-[80px] hover:shadow-2xl hover:shadow-cyan-500/50 transition-all flex items-center gap-3 text-lg font-semibold">
+              <button className="group  cursor-pointer btn-dab-navy  text-white px-10 py-5 rounded-[80px] hover:shadow-2xl hover:shadow-cyan-500/50 transition-all flex items-center gap-3 text-lg font-semibold">
                 Tham gia DAB-Lab
                 <Rocket className="w-6 h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </button>

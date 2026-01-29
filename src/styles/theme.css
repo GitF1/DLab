@@ -180,3 +180,14 @@
     line-height: 1.5;
   }
 }
+
+@layer components {
+  .btn-dab-navy {
+    @apply text-white;
+    background-color: #172d52;
+  }
+
+  .btn-dab-navy:hover {
+    background-color: #1f3b6f;
+  }
+}

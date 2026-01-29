@@ -53,7 +53,7 @@ export default function App() {
               </a>
             </div>
             <a href="#contact">
-              <button className=" bg-cyan-500  text-white px-6 py-3 rounded-3xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all font-medium">
+              <button className="btn-dab-navy px-6 py-3 rounded-3xl hover:shadow-lg hover:shadow-cyan-500/50 transition-all font-medium">
                 Tham gia ngay
               </button>
             </a>
