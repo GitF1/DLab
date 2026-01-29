@@ -1,6 +1,6 @@
 import { Shield, DollarSign, Heart, Network } from "lucide-react";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import Gallery from "@/app/components/Gallery";
 import CountUp from "@/components/CountUp";
 import ScrollFloat from "@/components/ScrollFloat";
 
@@ -107,108 +107,101 @@ export default function WhyChoose() {
             );
           })}
         </div>
-
-        {/* Visual Section */}
-        <ScrollAnimation delay={0.2}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl md:text-4xl mb-6 text-white">
-                Đà Nẵng -{" "}
-                <span className="text-cyan-400">Hub công nghệ năng động</span>
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">
-                      Vị trí chiến lược
-                    </h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      Nằm ở trung tâm miền Trung, kết nối dễ dàng với các thành
-                      phố lớn và các nước trong khu vực
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">
-                      Hạ tầng hiện đại
-                    </h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      Trung tâm Phần mềm Đà Nẵng với đầy đủ tiện nghi, kết nối
-                      internet tốc độ cao
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">
-                      Nguồn nhân lực chất lượng
-                    </h4>
-                    <p className="text-slate-300 leading-relaxed">
-                      Đội ngũ kỹ sư trẻ tài năng từ các trường đại học hàng đầu
-                      khu vực
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl blur-2xl"></div>
-              <div className="relative rounded-3xl overflow-hidden border border-cyan-500/30">
-                <img
-                  src="/assets/img/bridge.jpg"
-                  alt="Da Nang City"
-                  className="w-full h-[500px] object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              </div>
-            </div>
-          </div>
-        </ScrollAnimation>
-
-        <ScrollAnimation delay={0.4}>
-          <div className="mt-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30 rounded-3xl p-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                  40-50%
-                </div>
-                <div className="text-slate-300">Giảm chi phí vận hành</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                  #1
-                </div>
-                <div className="text-slate-300">Thành phố đáng sống VN</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                  <CountUp
-                    from={0}
-                    to={100}
-                    separator=","
-                    direction="up"
-                    duration={2}
-                    className="count-up-text"
-                  />
-                  +
-                </div>
-                <div className="text-slate-300">Doanh nghiệp công nghệ</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                  24/7
-                </div>
-                <div className="text-slate-300">Hỗ trợ và Lab access</div>
-              </div>
-            </div>
-          </div>
-        </ScrollAnimation>
       </div>
+
+      <Gallery className="rounded-none py-0">
+        <div className="w-full">
+          {/* Visual Section */}
+          <ScrollAnimation delay={0.2}>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl mb-6 text-white">
+                  Đà Nẵng -{" "}
+                  <span className="text-cyan-400">Hub công nghệ năng động</span>
+                </h3>
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-xl text-white mb-2 font-semibold">
+                        Vị trí chiến lược
+                      </h4>
+                      <p className="text-slate-300 leading-relaxed">
+                        Nằm ở trung tâm miền Trung, kết nối dễ dàng với các
+                        thành phố lớn và các nước trong khu vực
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-xl text-white mb-2 font-semibold">
+                        Hạ tầng hiện đại
+                      </h4>
+                      <p className="text-slate-300 leading-relaxed">
+                        Trung tâm Phần mềm Đà Nẵng với đầy đủ tiện nghi, kết nối
+                        internet tốc độ cao
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-xl text-white mb-2 font-semibold">
+                        Nguồn nhân lực chất lượng
+                      </h4>
+                      <p className="text-slate-300 leading-relaxed">
+                        Đội ngũ kỹ sư trẻ tài năng từ các trường đại học hàng
+                        đầu khu vực
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation delay={0.4}>
+            <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30 rounded-3xl p-8 w-full backdrop-blur-sm mt-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                    40-50%
+                  </div>
+                  <div className="text-slate-300">Giảm chi phí vận hành</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                    #1
+                  </div>
+                  <div className="text-slate-300">Thành phố đáng sống VN</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                    <CountUp
+                      from={0}
+                      to={100}
+                      separator=","
+                      direction="up"
+                      duration={2}
+                      className="count-up-text"
+                    />
+                    +
+                  </div>
+                  <div className="text-slate-300">Doanh nghiệp công nghệ</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                    24/7
+                  </div>
+                  <div className="text-slate-300">Hỗ trợ và Lab access</div>
+                </div>
+              </div>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </Gallery>
     </section>
   );
 }

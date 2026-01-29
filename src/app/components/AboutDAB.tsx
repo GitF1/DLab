@@ -3,6 +3,7 @@ import ScrollAnimation from "@/app/components/ScrollAnimation";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 import BlurText from "@/components/BlurText";
 import CardSwap, { Card } from "@/components/CardSwap";
+import Gallery from "./Gallery";
 
 export default function AboutDAB() {
   const features = [
@@ -68,7 +69,6 @@ export default function AboutDAB() {
           </div>
         </ScrollAnimation>
 
-        {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
           <ScrollAnimation delay={0.2}>
             <div className="relative">
