@@ -1,43 +1,42 @@
-import { Rocket, Building, Globe, Lightbulb } from "lucide-react";
+import { Rocket, Building, Globe, Lightbulb, MapPin, Users, Briefcase } from "lucide-react";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-
-const targetAudience = [
-  {
-    title: "Startup AI/Blockchain",
-    description:
-      "Đang tìm môi trường thử nghiệm, phát triển sản phẩm và tiếp cận thị trường",
-    color: "from-cyan-500 to-blue-500",
-    image: "/assets/img/city.jpg",
-    benefits: ["Môi trường sandbox", "Chi phí thấp", "Hỗ trợ pháp lý"],
-  },
-  {
-    title: "Công ty công nghệ",
-    description: "Muốn R&D tại Việt Nam với chi phí tối ưu và chất lượng cao",
-    color: "from-blue-500 to-purple-500",
-    image: "/assets/img/bridge.jpg",
-    benefits: ["Nguồn nhân lực", "Hạ tầng hiện đại", "Chính sách ưu đãi"],
-  },
-  {
-    title: "Team quốc tế",
-    description:
-      "Cần base tại Đông Nam Á để phát triển và mở rộng thị trường khu vực",
-    color: "from-purple-500 to-pink-500",
-    image: "/assets/img/beach.jpg",
-    benefits: ["Vị trí chiến lược", "Visa support", "Cộng đồng expat"],
-  },
-  {
-    title: "Doanh nghiệp",
-    description:
-      "Muốn pilot giải pháp AI trong khuôn khổ sandbox và chuyển đổi số",
-    color: "from-pink-500 to-rose-500",
-    image: "/assets/img/high.png",
-    benefits: ["Tư vấn chuyên môn", "PoC support", "Kết nối đối tác"],
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function ForWho() {
+  const { t } = useTranslation();
+  
+  const targetAudience = [
+    {
+      title: t('forWho.targetAudience.0.title'),
+      description: t('forWho.targetAudience.0.description'),
+      color: "from-cyan-500 to-blue-500",
+      image: "/assets/img/city.jpg",
+      benefits: t('forWho.targetAudience.0.benefits', { returnObjects: true }) as string[],
+    },
+    {
+      title: t('forWho.targetAudience.1.title'),
+      description: t('forWho.targetAudience.1.description'),
+      color: "from-blue-500 to-purple-500",
+      image: "/assets/img/bridge.jpg",
+      benefits: t('forWho.targetAudience.1.benefits', { returnObjects: true }) as string[],
+    },
+    {
+      title: t('forWho.targetAudience.2.title'),
+      description: t('forWho.targetAudience.2.description'),
+      color: "from-purple-500 to-pink-500",
+      image: "/assets/img/beach.jpg",
+      benefits: t('forWho.targetAudience.2.benefits', { returnObjects: true }) as string[],
+    },
+    {
+      title: t('forWho.targetAudience.3.title'),
+      description: t('forWho.targetAudience.3.description'),
+      color: "from-pink-500 to-rose-500",
+      image: "/assets/img/high.png",
+      benefits: t('forWho.targetAudience.3.benefits', { returnObjects: true }) as string[],
+    },
+  ];
   return (
     <section
       id="who"
@@ -54,17 +53,16 @@ export default function ForWho() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 px-4 py-2 rounded-full mb-6">
               <Lightbulb className="w-4 h-4" />
-              <span className="text-sm font-medium">Đối tượng mục tiêu</span>
+              <span className="text-sm font-medium">{t('forWho.badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold">
-                DAB-Lab
+                {t('forWho.title')}
               </span>{" "}
-              dành cho ai?
+              {t('forWho.titleSuffix')}
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Chúng tôi phục vụ các đối tượng từ startup đến doanh nghiệp lớn,
-              từ team local đến quốc tế
+              {t('forWho.description')}
             </p>
           </div>
         </ScrollAnimation>
@@ -148,10 +146,10 @@ export default function ForWho() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-8 left-8 right-8">
                   <h4 className="text-2xl text-white font-semibold mb-2">
-                    Công nghệ tiên tiến
+                    {t('forWho.visualTitle')}
                   </h4>
                   <p className="text-slate-200">
-                    Blockchain, AI, và các công nghệ đột phá khác
+                    {t('forWho.visualDescription')}
                   </p>
                 </div>
               </div>
@@ -159,57 +157,52 @@ export default function ForWho() {
 
             <div className="order-1 lg:order-2">
               <h3 className="text-3xl md:text-4xl mb-6 text-white">
-                Tham gia{" "}
-                <span className="text-cyan-400">hệ sinh thái đổi mới</span>
+                {t('forWho.ecosystemTitle')}{" "}
+                <span className="text-cyan-400">{t('forWho.ecosystemTitleHighlight')}</span>
               </h3>
               <p className="text-lg text-slate-300 leading-relaxed mb-8">
-                DAB-Lab không chỉ là một không gian làm việc, mà là một hệ sinh
-                thái hoàn chỉnh với đầy đủ các yếu tố cần thiết để bạn phát
-                triển và thành công.
+                {t('forWho.ecosystemDescription')}
               </p>
 
               <div className="space-y-6">
                 <div className="flex gap-4 p-6 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">1</span>
+                    <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">
-                      Đăng ký và đánh giá
+                    <h4 className="text-lg mb-2 text-white font-semibold">
+                      {t('forWho.ecosystemFeatures.0.title')}
                     </h4>
-                    <p className="text-slate-300">
-                      Gửi thông tin dự án, chúng tôi sẽ đánh giá và phản hồi
-                      nhanh chóng
+                    <p className="text-slate-300 leading-relaxed">
+                      {t('forWho.ecosystemFeatures.0.description')}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/30">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">2</span>
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">
-                      Onboarding và setup
+                    <h4 className="text-lg mb-2 text-white font-semibold">
+                      {t('forWho.ecosystemFeatures.1.title')}
                     </h4>
-                    <p className="text-slate-300">
-                      Hỗ trợ setup lab, giấy tờ pháp lý và kết nối với các bên
-                      liên quan
+                    <p className="text-slate-300 leading-relaxed">
+                      {t('forWho.ecosystemFeatures.1.description')}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex gap-4 p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/30">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <span className="text-white font-bold text-xl">3</span>
+                    <Briefcase className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">
-                      Phát triển và scale
+                    <h4 className="text-lg mb-2 text-white font-semibold">
+                      {t('forWho.ecosystemFeatures.2.title')}
                     </h4>
-                    <p className="text-slate-300">
-                      Tận dụng hệ sinh thái để phát triển sản phẩm và mở rộng
-                      thị trường
+                    <p className="text-slate-300 leading-relaxed">
+                      {t('forWho.ecosystemFeatures.2.description')}
                     </p>
                   </div>
                 </div>

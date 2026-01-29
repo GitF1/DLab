@@ -48,6 +48,213 @@
       }
     ]
   },
+  "whyChoose": {
+    "badge": "Lợi thế cạnh tranh",
+    "title": "Tại sao chọn",
+    "titleHighlight": "DAB-Lab?",
+    "description": "Chúng tôi mang đến những lợi thế độc đáo giúp doanh nghiệp của bạn phát triển nhanh chóng và bền vững",
+    "advantages": [
+      {
+        "title": "Chính sách Sandbox",
+        "description": "Đà Nẵng đang thí điểm cơ chế đặc thù cho AI, fintech, blockchain"
+      },
+      {
+        "title": "Chi phí tối ưu",
+        "description": "Vận hành thấp hơn 40-50% so với TP.HCM và Hà Nội"
+      },
+      {
+        "title": "Chất lượng sống",
+        "description": "Thành phố đáng sống, thu hút và giữ chân nhân tài tech"
+      },
+      {
+        "title": "Hệ sinh thái",
+        "description": "Kết nối trực tiếp với chính quyền, đại học, và cộng đồng startup"
+      }
+    ],
+    "cityTitle": "Đà Nẵng -",
+    "cityTitleHighlight": "Hub công nghệ năng động",
+    "cityFeatures": [
+      {
+        "title": "Vị trí chiến lược",
+        "description": "Trung tâm miền Trung, kết nối thuận tiện với các thành phố lớn và các nước ASEAN"
+      },
+      {
+        "title": "Chính sách ưu đãi",
+        "description": "Chính sách đặc thù cho AI, fintech, blockchain từ chính quyền địa phương"
+      },
+      {
+        "title": "Môi trường sáng tạo",
+        "description": "Thành phố biển hiện đại, môi trường làm việc thoải mái và sáng tạo"
+      }
+    ],
+    "stats": {
+      "costReduction": "40-50%",
+      "costReductionLabel": "Giảm chi phí vận hành",
+      "ranking": "#1",
+      "rankingLabel": "Thành phố đáng sống VN",
+      "universities": "10+",
+      "universitiesLabel": "Trường đại học",
+      "techCompanies": "500+",
+      "techCompaniesLabel": "Công ty công nghệ"
+    }
+  },
+  "forWho": {
+    "badge": "Đối tượng mục tiêu",
+    "title": "DAB-Lab",
+    "titleSuffix": "dành cho ai?",
+    "description": "Chúng tôi phục vụ các đối tượng từ startup đến doanh nghiệp lớn, từ team local đến quốc tế",
+    "targetAudience": [
+      {
+        "title": "Startup AI/Blockchain",
+        "description": "Đang tìm môi trường thử nghiệm, phát triển sản phẩm và tiếp cận thị trường",
+        "benefits": ["Môi trường sandbox", "Chi phí thấp", "Hỗ trợ pháp lý"]
+      },
+      {
+        "title": "Công ty công nghệ",
+        "description": "Muốn R&D tại Việt Nam với chi phí tối ưu và chất lượng cao",
+        "benefits": ["Nguồn nhân lực", "Hạ tầng hiện đại", "Chính sách ưu đãi"]
+      },
+      {
+        "title": "Team quốc tế",
+        "description": "Cần base tại Đông Nam Á để phát triển và mở rộng thị trường khu vực",
+        "benefits": ["Vị trí chiến lược", "Visa support", "Cộng đồng expat"]
+      },
+      {
+        "title": "Doanh nghiệp",
+        "description": "Muốn pilot giải pháp AI trong khuôn khổ sandbox và chuyển đổi số",
+        "benefits": ["Tư vấn chuyên môn", "PoC support", "Kết nối đối tác"]
+      }
+    ],
+    "ecosystemTitle": "Tham gia",
+    "ecosystemTitleHighlight": "hệ sinh thái đổi mới",
+    "ecosystemDescription": "DAB-Lab không chỉ là một không gian làm việc, mà là một hệ sinh thái hoàn chỉnh với đầy đủ các yếu tố cần thiết để bạn phát triển và thành công.",
+    "ecosystemFeatures": [
+      {
+        "title": "Kết nối cộng đồng",
+        "description": "Gặp gỡ và hợp tác với các chuyên gia AI, blockchain hàng đầu trong khu vực"
+      },
+      {
+        "title": "Hỗ trợ đầu tư",
+        "description": "Kết nối với các quỹ đầu tư và angel investors quan tâm đến công nghệ AI/Blockchain"
+      },
+      {
+        "title": "Phát triển tài năng",
+        "description": "Chương trình training và mentoring từ các chuyên gia hàng đầu"
+      }
+    ],
+    "visualTitle": "Công nghệ tiên tiến",
+    "visualDescription": "Blockchain, AI, và các công nghệ đột phá khác"
+  },
+  "features": {
+    "title": "Khả năng cốt lõi của chúng tôi",
+    "description": "Kết hợp công nghệ blockchain và trí tuệ nhân tạo để tạo ra các giải pháp sáng tạo cho tương lai",
+    "items": [
+      {
+        "title": "Đổi mới Blockchain",
+        "description": "Phát triển các giải pháp blockchain an toàn và có thể mở rộng cho các ứng dụng doanh nghiệp và công cộng."
+      },
+      {
+        "title": "Trí tuệ nhân tạo",
+        "description": "Tạo ra các mô hình AI phù hợp với ngôn ngữ, văn hóa và nhu cầu kinh doanh Việt Nam."
+      },
+      {
+        "title": "Bảo mật hàng đầu",
+        "description": "Triển khai các giao thức bảo mật đẳng cấp thế giới để bảo vệ dữ liệu và giao dịch."
+      },
+      {
+        "title": "Hiệu suất cao",
+        "description": "Tối ưu hóa hệ thống về tốc độ và hiệu quả mà không ảnh hưởng đến chất lượng."
+      },
+      {
+        "title": "Phân tích dữ liệu",
+        "description": "Phân tích nâng cao và thông tin chi tiết được hỗ trợ bởi các thuật toán machine learning."
+      },
+      {
+        "title": "Smart Contracts",
+        "description": "Phát triển các smart contract thông minh để tự động hóa và minh bạch."
+      }
+    ]
+  },
+  "location": {
+    "title": "Tọa lạc tại Đà Nẵng xinh đẹp",
+    "description": "Một thiên đường ven biển nơi sự đổi mới gặp gỡ thiên nhiên - môi trường hoàn hảo cho sự sáng tạo và nghiên cứu đột phá",
+    "features": [
+      {
+        "title": "Vị trí chiến lược",
+        "description": "Đà Nẵng là thành phố đáng sống nhất Việt Nam, vị trí hoàn hảo tại miền Trung với cơ sở hạ tầng đẳng cấp thế giới và kết nối với các trung tâm công nghệ lớn châu Á."
+      },
+      {
+        "title": "Cảm hứng ven biển",
+        "description": "Được bao quanh bởi những bãi biển nguyên sơ và sông Hàn, vị trí của chúng tôi mang đến một môi trường tươi mát kích thích sự sáng tạo và đổi mới."
+      },
+      {
+        "title": "Xuất sắc quanh năm",
+        "description": "Khí hậu hoàn hảo và tiện nghi hiện đại khiến Đà Nẵng trở thành địa điểm lý tưởng để thu hút tài năng hàng đầu từ khắp nơi trên thế giới."
+      },
+      {
+        "title": "Di sản văn hóa",
+        "description": "Gần các di tích UNESCO như Phố cổ Hội An và Kinh thành Huế cung cấp bối cảnh văn hóa phong phú cho công việc của chúng tôi."
+      }
+    ],
+    "stats": {
+      "ranking": "#1",
+      "rankingLabel": "Thành phố đáng sống nhất",
+      "beaches": "30km",
+      "beachesLabel": "Bãi biển đẹp",
+      "population": "1M+",
+      "populationLabel": "Dân số",
+      "unescoSites": "3",
+      "unescoSitesLabel": "Di tích UNESCO gần đó"
+    }
+  },
+  "contact": {
+    "badge": "Liên hệ với chúng tôi",
+    "title": "Sẵn sàng build cùng DAB-Lab?",
+    "description": "Đăng ký tham quan Lab hoặc đặt lịch trao đổi. Cùng xây dựng tương lai AI tại Đà Nẵng.",
+    "form": {
+      "title": "Đăng ký tham gia",
+      "name": "Họ và tên",
+      "namePlaceholder": "Nguyễn Văn A",
+      "email": "Email",
+      "emailPlaceholder": "email@example.com",
+      "company": "Công ty",
+      "companyPlaceholder": "Tên công ty",
+      "phone": "Số điện thoại",
+      "phonePlaceholder": "+84 123 456 789",
+      "projectType": "Loại dự án",
+      "projectOptions": {
+        "ai": "AI/Machine Learning",
+        "blockchain": "Blockchain/Web3",
+        "fintech": "Fintech",
+        "consulting": "Tư vấn",
+        "other": "Khác"
+      },
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Chia sẻ thêm về dự án của bạn...",
+      "submit": "Gửi đăng ký",
+      "submitSuccess": "Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm nhất."
+    },
+    "info": {
+      "title": "Thông tin liên hệ",
+      "address": {
+        "title": "Địa chỉ",
+        "text": "Trung tâm Phần mềm Đà Nẵng\nQuận Ngũ Hành Sơn, Đà Nẵng"
+      },
+      "email": {
+        "title": "Email",
+        "text": "hello@dab-lab.vn"
+      },
+      "hours": {
+        "title": "Giờ làm việc",
+        "text": "Thứ 2 - Thứ 6: 8:00 - 17:30\nThứ 7: 8:00 - 12:00"
+      }
+    },
+    "community": {
+      "title": "Tham gia cộng đồng",
+      "description": "Kết nối với các chuyên gia AI khác tại Đà Nẵng.",
+      "cta": "Tìm hiểu thêm →"
+    }
+  },
   "footer": {
     "slogan": "Xây dựng tương lai AI & Blockchain tại Đà Nẵng",
     "quickLinks": "Liên kết nhanh",

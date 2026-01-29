@@ -1,8 +1,11 @@
 import { Mail, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,7 +19,7 @@ export default function Contact() {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
-    alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm nhất.");
+    alert(t('contact.form.submitSuccess'));
   };
 
   const handleChange = (
@@ -37,14 +40,13 @@ export default function Contact() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 border border-zinc-800 bg-zinc-900/50 text-zinc-300 px-4 py-1.5 rounded-full mb-6">
               <Send className="w-3.5 h-3.5" />
-              <span className="text-sm font-medium">Liên hệ với chúng tôi</span>
+              <span className="text-sm font-medium">{t('contact.badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white tracking-tight">
-              Sẵn sàng build cùng DAB-Lab?
+              {t('contact.title')}
             </h2>
             <p className="text-lg text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-              Đăng ký tham quan Lab hoặc đặt lịch trao đổi. Cùng xây dựng tương
-              lai AI tại Đà Nẵng.
+              {t('contact.description')}
             </p>
           </div>
         </ScrollAnimation>
@@ -58,7 +60,7 @@ export default function Contact() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
               
               <h3 className="relative z-10 text-2xl mb-8 text-white font-semibold flex items-center gap-3">
-                Đăng ký tham gia
+                {t('contact.form.title')}
               </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,7 +69,7 @@ export default function Contact() {
                       htmlFor="name"
                       className="text-sm text-zinc-400 font-medium"
                     >
-                      Họ và tên <span className="text-red-500">*</span>
+                      {t('contact.form.name')} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -77,7 +79,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-950 text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/40 transition duration-200"
-                      placeholder="Nguyễn Văn A"
+                      placeholder={t('contact.form.namePlaceholder')}
                     />
                   </div>
                   <div className="space-y-2">
@@ -85,7 +87,7 @@ export default function Contact() {
                       htmlFor="email"
                       className="text-sm text-zinc-400 font-medium"
                     >
-                      Email <span className="text-red-500">*</span>
+                      {t('contact.form.email')} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="email"
@@ -95,7 +97,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-950 text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/40 transition duration-200"
-                      placeholder="email@example.com"
+                      placeholder={t('contact.form.emailPlaceholder')}
                     />
                   </div>
                 </div>
@@ -106,7 +108,7 @@ export default function Contact() {
                       htmlFor="company"
                       className="text-sm text-zinc-400 font-medium"
                     >
-                      Công ty/Tổ chức <span className="text-red-500">*</span>
+                      {t('contact.form.company')} <span className="text-red-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -116,7 +118,7 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-950 text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/40 transition duration-200"
-                      placeholder="Tên công ty"
+                      placeholder={t('contact.form.companyPlaceholder')}
                     />
                   </div>
                   <div className="space-y-2">
@@ -124,7 +126,7 @@ export default function Contact() {
                       htmlFor="phone"
                       className="text-sm text-zinc-400 font-medium"
                     >
-                      Số điện thoại
+                      {t('contact.form.phone')}
                     </label>
                     <input
                       type="tel"
@@ -133,7 +135,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-lg border border-zinc-800 bg-zinc-950 text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-white/20 focus:border-white/40 transition duration-200"
-                      placeholder="+84..."
+                      placeholder={t('contact.form.phonePlaceholder')}
                     />
                   </div>
                 </div>
@@ -143,7 +145,7 @@ export default function Contact() {
                     type="submit"
                     className="w-full md:w-auto px-8 py-3.5 bg-white text-black rounded-lg hover:bg-zinc-200 transition-colors duration-200 flex items-center justify-center gap-2 font-semibold text-sm"
                   >
-                    Gửi đăng ký
+                    {t('contact.form.submit')}
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -156,7 +158,7 @@ export default function Contact() {
             <div className="h-full flex flex-col gap-6">
               <div className="bg-zinc-900/50 backdrop-blur-sm rounded-2xl border border-zinc-800 p-8 flex-1">
                 <h3 className="text-xl mb-6 text-white font-semibold">
-                  Thông tin liên hệ
+                  {t('contact.info.title')}
                 </h3>
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
@@ -164,11 +166,9 @@ export default function Contact() {
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-medium text-white mb-1">Địa chỉ</div>
+                      <div className="font-medium text-white mb-1">{t('contact.info.address.title')}</div>
                       <div className="text-zinc-400 text-sm leading-relaxed">
-                        Trung tâm Phần mềm Đà Nẵng
-                        <br />
-                        Đà Nẵng, Việt Nam
+                        {t('contact.info.address.text')}
                       </div>
                     </div>
                   </div>
@@ -177,11 +177,9 @@ export default function Contact() {
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-medium text-white mb-1">Email</div>
+                      <div className="font-medium text-white mb-1">{t('contact.info.email.title')}</div>
                       <div className="text-zinc-400 text-sm">
-                        contact@dablab.vn
-                        <br />
-                        info@dablab.vn
+                        {t('contact.info.email.text')}
                       </div>
                     </div>
                   </div>
@@ -190,9 +188,9 @@ export default function Contact() {
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
-                      <div className="font-medium text-white mb-1">Điện thoại</div>
+                      <div className="font-medium text-white mb-1">{t('contact.info.hours.title')}</div>
                       <div className="text-zinc-400 text-sm">
-                        +84 236 XXX XXXX
+                        {t('contact.info.hours.text')}
                       </div>
                     </div>
                   </div>
@@ -200,10 +198,10 @@ export default function Contact() {
               </div>
 
               <div className="bg-zinc-800 rounded-2xl p-8 border border-zinc-700/50">
-                 <h4 className="text-white font-bold text-lg mb-2">Tham gia cộng đồng</h4>
-                 <p className="text-zinc-400 text-sm mb-4">Kết nối với các chuyên gia AI khác tại Đà Nẵng.</p>
+                 <h4 className="text-white font-bold text-lg mb-2">{t('contact.community.title')}</h4>
+                 <p className="text-zinc-400 text-sm mb-4">{t('contact.community.description')}</p>
                   <button className="text-sm font-semibold text-white underline underline-offset-4 hover:text-zinc-300">
-                   Tìm hiểu thêm →
+                   {t('contact.community.cta')}
                  </button>
               </div>
             </div>

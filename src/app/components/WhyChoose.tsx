@@ -1,41 +1,42 @@
-import { Shield, DollarSign, Heart, Network } from "lucide-react";
+import { Shield, DollarSign, Heart, Network, MapPin, Users, Building } from "lucide-react";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
 import Gallery from "@/app/components/Gallery";
 import CountUp from "@/components/CountUp";
 import ScrollFloat from "@/components/ScrollFloat";
+import { useTranslation } from 'react-i18next';
 
 export default function WhyChoose() {
+  const { t } = useTranslation();
+  
   const advantages = [
     {
       icon: Shield,
-      title: "Chính sách Sandbox",
-      description:
-        "Đà Nẵng đang thí điểm cơ chế đặc thù cho AI, fintech, blockchain",
+      title: t('whyChoose.advantages.0.title'),
+      description: t('whyChoose.advantages.0.description'),
       color: "from-cyan-500 to-blue-500",
       bgColor: "from-cyan-500/10 to-blue-500/10",
       borderColor: "border-cyan-500/30",
     },
     {
       icon: DollarSign,
-      title: "Chi phí tối ưu",
-      description: "Vận hành thấp hơn 40-50% so với TP.HCM và Hà Nội",
+      title: t('whyChoose.advantages.1.title'),
+      description: t('whyChoose.advantages.1.description'),
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-500/10 to-emerald-500/10",
       borderColor: "border-green-500/30",
     },
     {
       icon: Heart,
-      title: "Chất lượng sống",
-      description: "Thành phố đáng sống, thu hút và giữ chân nhân tài tech",
+      title: t('whyChoose.advantages.2.title'),
+      description: t('whyChoose.advantages.2.description'),
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-500/10 to-rose-500/10",
       borderColor: "border-pink-500/30",
     },
     {
       icon: Network,
-      title: "Hệ sinh thái",
-      description:
-        "Kết nối trực tiếp với chính quyền, đại học, và cộng đồng startup",
+      title: t('whyChoose.advantages.3.title'),
+      description: t('whyChoose.advantages.3.description'),
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-500/10 to-indigo-500/10",
       borderColor: "border-purple-500/30",
@@ -59,17 +60,16 @@ export default function WhyChoose() {
           <div className="text-center mb-20">
             <div className="inline-flex items-center gap-2 bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 px-4 py-2 rounded-full mb-6">
               <Shield className="w-4 h-4" />
-              <span className="text-sm font-medium">Lợi thế cạnh tranh</span>
+              <span className="text-sm font-medium">{t('whyChoose.badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
-              Tại sao chọn{" "}
+              {t('whyChoose.title')}{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold">
-                DAB-Lab?
+                {t('whyChoose.titleHighlight')}
               </span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Chúng tôi mang đến những lợi thế độc đáo giúp doanh nghiệp của bạn
-              phát triển nhanh chóng và bền vững
+              {t('whyChoose.description')}
             </p>
           </div>
         </ScrollAnimation>
@@ -116,19 +116,18 @@ export default function WhyChoose() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-3xl md:text-4xl mb-6 text-white">
-                  Đà Nẵng -{" "}
-                  <span className="text-cyan-400">Hub công nghệ năng động</span>
+                  {t('whyChoose.cityTitle')}{" "}
+                  <span className="text-cyan-400">{t('whyChoose.cityTitleHighlight')}</span>
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <h4 className="text-xl text-white mb-2 font-semibold">
-                        Vị trí chiến lược
+                        {t('whyChoose.cityFeatures.0.title')}
                       </h4>
                       <p className="text-slate-300 leading-relaxed">
-                        Nằm ở trung tâm miền Trung, kết nối dễ dàng với các
-                        thành phố lớn và các nước trong khu vực
+                        {t('whyChoose.cityFeatures.0.description')}
                       </p>
                     </div>
                   </div>
@@ -136,11 +135,10 @@ export default function WhyChoose() {
                     <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <h4 className="text-xl text-white mb-2 font-semibold">
-                        Hạ tầng hiện đại
+                        {t('whyChoose.cityFeatures.1.title')}
                       </h4>
                       <p className="text-slate-300 leading-relaxed">
-                        Trung tâm Phần mềm Đà Nẵng với đầy đủ tiện nghi, kết nối
-                        internet tốc độ cao
+                        {t('whyChoose.cityFeatures.1.description')}
                       </p>
                     </div>
                   </div>
@@ -148,11 +146,10 @@ export default function WhyChoose() {
                     <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                     <div>
                       <h4 className="text-xl text-white mb-2 font-semibold">
-                        Nguồn nhân lực chất lượng
+                        {t('whyChoose.cityFeatures.2.title')}
                       </h4>
                       <p className="text-slate-300 leading-relaxed">
-                        Đội ngũ kỹ sư trẻ tài năng từ các trường đại học hàng
-                        đầu khu vực
+                        {t('whyChoose.cityFeatures.2.description')}
                       </p>
                     </div>
                   </div>
@@ -167,15 +164,15 @@ export default function WhyChoose() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                    40-50%
+                    {t('whyChoose.stats.costReduction')}
                   </div>
-                  <div className="text-slate-300">Giảm chi phí vận hành</div>
+                  <div className="text-slate-300">{t('whyChoose.stats.costReductionLabel')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                    #1
+                    {t('whyChoose.stats.ranking')}
                   </div>
-                  <div className="text-slate-300">Thành phố đáng sống VN</div>
+                  <div className="text-slate-300">{t('whyChoose.stats.rankingLabel')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
@@ -189,13 +186,13 @@ export default function WhyChoose() {
                     />
                     +
                   </div>
-                  <div className="text-slate-300">Doanh nghiệp công nghệ</div>
+                  <div className="text-slate-300">{t('whyChoose.stats.techCompaniesLabel')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                    24/7
+                    {t('whyChoose.stats.universities')}
                   </div>
-                  <div className="text-slate-300">Hỗ trợ và Lab access</div>
+                  <div className="text-slate-300">{t('whyChoose.stats.universitiesLabel')}</div>
                 </div>
               </div>
             </div>

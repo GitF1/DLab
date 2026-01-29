@@ -48,6 +48,213 @@
       }
     ]
   },
+  "whyChoose": {
+    "badge": "Competitive advantages",
+    "title": "Why choose",
+    "titleHighlight": "DAB-Lab?",
+    "description": "We bring unique advantages that help your business grow quickly and sustainably",
+    "advantages": [
+      {
+        "title": "Sandbox Policy",
+        "description": "Da Nang is piloting special mechanisms for AI, fintech, blockchain"
+      },
+      {
+        "title": "Optimal costs",
+        "description": "40-50% lower operating costs compared to Ho Chi Minh City and Hanoi"
+      },
+      {
+        "title": "Quality of life",
+        "description": "Most liveable city, attracting and retaining tech talent"
+      },
+      {
+        "title": "Ecosystem",
+        "description": "Direct connection with government, universities, and startup community"
+      }
+    ],
+    "cityTitle": "Da Nang -",
+    "cityTitleHighlight": "Dynamic technology hub",
+    "cityFeatures": [
+      {
+        "title": "Strategic location",
+        "description": "Central Vietnam hub with convenient connectivity to major cities and ASEAN countries"
+      },
+      {
+        "title": "Preferential policies",
+        "description": "Special policies for AI, fintech, blockchain from local government"
+      },
+      {
+        "title": "Innovation environment",
+        "description": "Modern coastal city with comfortable and innovative working environment"
+      }
+    ],
+    "stats": {
+      "costReduction": "40-50%",
+      "costReductionLabel": "Reduced operating costs",
+      "ranking": "#1",
+      "rankingLabel": "Most liveable city VN",
+      "universities": "10+",
+      "universitiesLabel": "Universities",
+      "techCompanies": "500+",
+      "techCompaniesLabel": "Tech companies"
+    }
+  },
+  "forWho": {
+    "badge": "Target audience",
+    "title": "Who is",
+    "titleSuffix": "DAB-Lab for?",
+    "description": "We serve various entities from startups to large enterprises, from local to international teams",
+    "targetAudience": [
+      {
+        "title": "AI/Blockchain Startups",
+        "description": "Looking for testing environment, product development and market access",
+        "benefits": ["Sandbox environment", "Low costs", "Legal support"]
+      },
+      {
+        "title": "Technology companies",
+        "description": "Want R&D in Vietnam with optimal costs and high quality",
+        "benefits": ["Human resources", "Modern infrastructure", "Preferential policies"]
+      },
+      {
+        "title": "International teams",
+        "description": "Need a base in Southeast Asia for regional development and market expansion",
+        "benefits": ["Strategic location", "Visa support", "Expat community"]
+      },
+      {
+        "title": "Enterprises",
+        "description": "Want to pilot AI solutions within sandbox framework and digital transformation",
+        "benefits": ["Expert consulting", "PoC support", "Partner connection"]
+      }
+    ],
+    "ecosystemTitle": "Join the",
+    "ecosystemTitleHighlight": "innovation ecosystem",
+    "ecosystemDescription": "DAB-Lab is not just a workspace, but a complete ecosystem with all the necessary elements for you to develop and succeed.",
+    "ecosystemFeatures": [
+      {
+        "title": "Community connection",
+        "description": "Meet and collaborate with leading AI and blockchain experts in the region"
+      },
+      {
+        "title": "Investment support",
+        "description": "Connect with investment funds and angel investors interested in AI/Blockchain technology"
+      },
+      {
+        "title": "Talent development",
+        "description": "Training and mentoring programs from leading experts"
+      }
+    ],
+    "visualTitle": "Advanced Technology",
+    "visualDescription": "Blockchain, AI, and other breakthrough technologies"
+  },
+  "features": {
+    "title": "Our Core Capabilities",
+    "description": "Combining blockchain technology and artificial intelligence to create innovative solutions for the future",
+    "items": [
+      {
+        "title": "Blockchain Innovation",
+        "description": "Developing secure and scalable blockchain solutions for enterprise and public applications."
+      },
+      {
+        "title": "Artificial Intelligence",
+        "description": "Creating AI models tailored for Vietnamese language, culture, and business needs."
+      },
+      {
+        "title": "Security First",
+        "description": "Implementing world-class security protocols to protect data and transactions."
+      },
+      {
+        "title": "High Performance",
+        "description": "Optimizing systems for speed and efficiency without compromising quality."
+      },
+      {
+        "title": "Data Analytics",
+        "description": "Advanced analytics and insights powered by machine learning algorithms."
+      },
+      {
+        "title": "Smart Contracts",
+        "description": "Developing intelligent smart contracts for automation and transparency."
+      }
+    ]
+  },
+  "location": {
+    "title": "Located in Beautiful Da Nang",
+    "description": "A coastal paradise where innovation meets nature - the perfect environment for creativity and breakthrough research",
+    "features": [
+      {
+        "title": "Strategic Location",
+        "description": "Da Nang is Vietnam's most liveable city, positioned perfectly in Central Vietnam with world-class infrastructure and connectivity to major tech hubs across Asia."
+      },
+      {
+        "title": "Coastal Inspiration",
+        "description": "Surrounded by pristine beaches and the Han River, our location offers a refreshing environment that stimulates creativity and innovation."
+      },
+      {
+        "title": "Year-Round Excellence",
+        "description": "Perfect climate and modern amenities make Da Nang an ideal location for attracting top talent from around the world."
+      },
+      {
+        "title": "Cultural Heritage",
+        "description": "Close proximity to UNESCO World Heritage sites like Hoi An Ancient Town and the Imperial City of Hue provides rich cultural context for our work."
+      }
+    ],
+    "stats": {
+      "ranking": "#1",
+      "rankingLabel": "Most Liveable City",
+      "beaches": "30km",
+      "beachesLabel": "Beautiful Beaches",
+      "population": "1M+",
+      "populationLabel": "Population",
+      "unescoSites": "3",
+      "unescoSitesLabel": "UNESCO Sites Nearby"
+    }
+  },
+  "contact": {
+    "badge": "Contact us",
+    "title": "Ready to build with DAB-Lab?",
+    "description": "Sign up for a lab tour or schedule a discussion. Let's build the future of AI in Da Nang together.",
+    "form": {
+      "title": "Join us",
+      "name": "Full name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "email@example.com",
+      "company": "Company",
+      "companyPlaceholder": "Company name",
+      "phone": "Phone number",
+      "phonePlaceholder": "+84 123 456 789",
+      "projectType": "Project type",
+      "projectOptions": {
+        "ai": "AI/Machine Learning",
+        "blockchain": "Blockchain/Web3",
+        "fintech": "Fintech",
+        "consulting": "Consulting",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your project...",
+      "submit": "Send registration",
+      "submitSuccess": "Thank you for registering! We will contact you soon."
+    },
+    "info": {
+      "title": "Contact information",
+      "address": {
+        "title": "Address",
+        "text": "Da Nang Software Center\nNgu Hanh Son District, Da Nang"
+      },
+      "email": {
+        "title": "Email",
+        "text": "hello@dab-lab.vn"
+      },
+      "hours": {
+        "title": "Working hours",
+        "text": "Monday - Friday: 8:00 - 17:30\nSaturday: 8:00 - 12:00"
+      }
+    },
+    "community": {
+      "title": "Join the community",
+      "description": "Connect with other AI experts in Da Nang.",
+      "cta": "Learn more →"
+    }
+  },
   "footer": {
     "slogan": "Building the future of AI & Blockchain in Da Nang",
     "quickLinks": "Quick Links",
