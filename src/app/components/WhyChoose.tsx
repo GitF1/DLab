@@ -159,7 +159,7 @@ export default function WhyChoose() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl blur-2xl"></div>
               <div className="relative rounded-3xl overflow-hidden border border-cyan-500/30">
-                <ImageWithFallback
+                <img
                   src="/public/assets/img/bridge.jpg"
                   alt="Da Nang City"
                   className="w-full h-[500px] object-cover"
