@@ -3,41 +3,45 @@ import ScrollAnimation from "@/app/components/ScrollAnimation";
 import ScrollStack, { ScrollStackItem } from "@/components/ScrollStack";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
 
-export default function ForWho() {
-  const targetAudience = [
-    {
-      icon: Rocket,
-      title: "Startup AI/Blockchain",
-      description:
-        "Đang tìm môi trường thử nghiệm, phát triển sản phẩm và tiếp cận thị trường",
-      color: "from-cyan-500 to-blue-500",
-      benefits: ["Môi trường sandbox", "Chi phí thấp", "Hỗ trợ pháp lý"],
-    },
-    {
-      icon: Building,
-      title: "Công ty công nghệ",
-      description: "Muốn R&D tại Việt Nam với chi phí tối ưu và chất lượng cao",
-      color: "from-blue-500 to-purple-500",
-      benefits: ["Nguồn nhân lực", "Hạ tầng hiện đại", "Chính sách ưu đãi"],
-    },
-    {
-      icon: Globe,
-      title: "Team quốc tế",
-      description:
-        "Cần base tại Đông Nam Á để phát triển và mở rộng thị trường khu vực",
-      color: "from-purple-500 to-pink-500",
-      benefits: ["Vị trí chiến lược", "Visa support", "Cộng đồng expat"],
-    },
-    {
-      icon: Lightbulb,
-      title: "Doanh nghiệp",
-      description:
-        "Muốn pilot giải pháp AI trong khuôn khổ sandbox và chuyển đổi số",
-      color: "from-pink-500 to-rose-500",
-      benefits: ["Tư vấn chuyên môn", "PoC support", "Kết nối đối tác"],
-    },
-  ];
+const targetAudience = [
+  {
+    icon: Rocket,
+    title: "Startup AI/Blockchain",
+    description:
+      "Đang tìm môi trường thử nghiệm, phát triển sản phẩm và tiếp cận thị trường",
+    color: "from-cyan-500 to-blue-500",
+    image: "/assets/img/city.jpg",
+    benefits: ["Môi trường sandbox", "Chi phí thấp", "Hỗ trợ pháp lý"],
+  },
+  {
+    icon: Building,
+    title: "Công ty công nghệ",
+    description: "Muốn R&D tại Việt Nam với chi phí tối ưu và chất lượng cao",
+    color: "from-blue-500 to-purple-500",
+    image: "/assets/img/bridge.jpg",
+    benefits: ["Nguồn nhân lực", "Hạ tầng hiện đại", "Chính sách ưu đãi"],
+  },
+  {
+    icon: Globe,
+    title: "Team quốc tế",
+    description:
+      "Cần base tại Đông Nam Á để phát triển và mở rộng thị trường khu vực",
+    color: "from-purple-500 to-pink-500",
+    image: "/assets/img/beach.jpg",
+    benefits: ["Vị trí chiến lược", "Visa support", "Cộng đồng expat"],
+  },
+  {
+    icon: Lightbulb,
+    title: "Doanh nghiệp",
+    description:
+      "Muốn pilot giải pháp AI trong khuôn khổ sandbox và chuyển đổi số",
+    color: "from-pink-500 to-rose-500",
+    image: "/assets/img/high.png",
+    benefits: ["Tư vấn chuyên môn", "PoC support", "Kết nối đối tác"],
+  },
+];
 
+export default function ForWho() {
   return (
     <section
       id="who"
@@ -71,13 +75,10 @@ export default function ForWho() {
 
         {/* Target Audience Cards */}
         <div className="mb-20">
-          <ScrollStack
-            useWindowScroll
-            className="overflow-visible"
-            
-          >
+          <ScrollStack useWindowScroll className="overflow-visible">
             {targetAudience.map((target, index) => {
               const Icon = target.icon;
+              const isOdd = (index + 1) % 2 === 1;
               return (
                 <ScrollStackItem
                   key={index}
@@ -92,29 +93,44 @@ export default function ForWho() {
                     {/* Card */}
                     <div className="relative h-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl p-8 rounded-3xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300">
                       <div
-                        className={`w-20 h-20 bg-gradient-to-br ${target.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                        className={`flex flex-col lg:flex-row ${isOdd ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 items-stretch`}
                       >
-                        <Icon className="w-10 h-10 text-white" />
-                      </div>
-                      <h3 className="text-2xl md:text-3xl mb-4 text-white font-semibold">
-                        {target.title}
-                      </h3>
-                      <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                        {target.description}
-                      </p>
+                        <div className="relative w-full lg:w-1/2 overflow-hidden rounded-2xl border border-cyan-500/20">
+                          <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-black/10 to-transparent"></div>
+                          <ImageWithFallback
+                            src={target.image}
+                            alt={target.title}
+                            className="w-full h-64 lg:h-full object-cover"
+                          />
+                        </div>
 
-                      {/* Benefits */}
-                      <div className="space-y-2">
-                        {target.benefits.map((benefit, i) => (
-                          <div key={i} className="flex items-center gap-3">
-                            <div
-                              className={`w-1.5 h-1.5 bg-gradient-to-r ${target.color} rounded-full`}
-                            ></div>
-                            <span className="text-sm text-slate-400">
-                              {benefit}
-                            </span>
+                        <div className="w-full lg:w-1/2 flex flex-col">
+                          <div
+                            className={`w-20 h-20 bg-gradient-to-br ${target.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                          >
+                            <Icon className="w-10 h-10 text-white" />
                           </div>
-                        ))}
+                          <h3 className="text-2xl md:text-3xl mb-4 text-white font-semibold">
+                            {target.title}
+                          </h3>
+                          <p className="text-lg text-slate-300 leading-relaxed mb-6">
+                            {target.description}
+                          </p>
+
+                          {/* Benefits */}
+                          <div className="space-y-2">
+                            {target.benefits.map((benefit, i) => (
+                              <div key={i} className="flex items-center gap-3">
+                                <div
+                                  className={`w-1.5 h-1.5 bg-gradient-to-r ${target.color} rounded-full`}
+                                ></div>
+                                <span className="text-sm text-slate-400">
+                                  {benefit}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
