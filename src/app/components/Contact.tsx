@@ -9,7 +9,7 @@ export default function Contact() {
     company: "",
     phone: "",
     projectType: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,10 +19,14 @@ export default function Contact() {
     alert("Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ sớm nhất.");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -42,10 +46,14 @@ export default function Contact() {
               <span className="text-sm font-medium">Liên hệ với chúng tôi</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
-              Sẵn sàng build cùng <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold">DAB-Lab?</span>
+              Sẵn sàng build cùng{" "}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold">
+                DAB-Lab?
+              </span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Đăng ký tham quan Lab hoặc đặt lịch trao đổi. Cùng xây dựng tương lai AI tại Đà Nẵng.
+              Đăng ký tham quan Lab hoặc đặt lịch trao đổi. Cùng xây dựng tương
+              lai AI tại Đà Nẵng.
             </p>
           </div>
         </ScrollAnimation>
@@ -54,11 +62,16 @@ export default function Contact() {
           {/* Contact Form - Takes 2 columns */}
           <ScrollAnimation delay={0.2} className="lg:col-span-2">
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl border border-cyan-500/30 p-8 md:p-12">
-              <h3 className="text-3xl mb-8 text-white font-semibold">Đăng ký tham gia</h3>
+              <h3 className="text-3xl mb-8 text-white font-semibold">
+                Đăng ký tham gia
+              </h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm mb-2 text-slate-300 font-medium">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm mb-2 text-slate-300 font-medium"
+                    >
                       Họ và tên *
                     </label>
                     <input
@@ -73,7 +86,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm mb-2 text-slate-300 font-medium">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm mb-2 text-slate-300 font-medium"
+                    >
                       Email *
                     </label>
                     <input
@@ -91,7 +107,10 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-sm mb-2 text-slate-300 font-medium">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm mb-2 text-slate-300 font-medium"
+                    >
                       Công ty/Tổ chức *
                     </label>
                     <input
@@ -106,7 +125,10 @@ export default function Contact() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm mb-2 text-slate-300 font-medium">
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm mb-2 text-slate-300 font-medium"
+                    >
                       Số điện thoại
                     </label>
                     <input
@@ -122,7 +144,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="projectType" className="block text-sm mb-2 text-slate-300 font-medium">
+                  <label
+                    htmlFor="projectType"
+                    className="block text-sm mb-2 text-slate-300 font-medium"
+                  >
                     Loại dự án *
                   </label>
                   <select
@@ -142,7 +167,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm mb-2 text-slate-300 font-medium">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm mb-2 text-slate-300 font-medium"
+                  >
                     Mô tả dự án
                   </label>
                   <textarea
@@ -172,7 +200,9 @@ export default function Contact() {
             <div className="space-y-6">
               {/* Contact Information Card */}
               <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-3xl p-8 text-white">
-                <h3 className="text-2xl mb-6 font-semibold">Thông tin liên hệ</h3>
+                <h3 className="text-2xl mb-6 font-semibold">
+                  Thông tin liên hệ
+                </h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -181,7 +211,8 @@ export default function Contact() {
                     <div>
                       <div className="font-semibold mb-1">Địa chỉ</div>
                       <div className="text-cyan-50 text-sm leading-relaxed">
-                        Trung tâm Phần mềm Đà Nẵng<br />
+                        Trung tâm Phần mềm Đà Nẵng
+                        <br />
                         Đà Nẵng, Việt Nam
                       </div>
                     </div>
@@ -193,7 +224,8 @@ export default function Contact() {
                     <div>
                       <div className="font-semibold mb-1">Email</div>
                       <div className="text-cyan-50 text-sm">
-                        contact@dablab.vn<br />
+                        contact@dablab.vn
+                        <br />
                         info@dablab.vn
                       </div>
                     </div>
@@ -211,27 +243,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
-              {/* Quick Actions Card */}
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/30 rounded-3xl p-8">
-                <h4 className="text-xl mb-4 text-white font-semibold">Tùy chọn khác</h4>
-                <div className="space-y-4">
-                  <button className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-xl hover:border-cyan-500/60 transition text-white group">
-                    <div className="flex items-center gap-3">
-                      <Calendar className="w-5 h-5 text-cyan-400" />
-                      <span>Đặt lịch tham quan</span>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition" />
-                  </button>
-                  <button className="w-full flex items-center justify-between p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition text-white group">
-                    <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5 text-purple-400" />
-                      <span>Tải brochure</span>
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 transition" />
-                  </button>
-                </div>
-              </div>
             </div>
           </ScrollAnimation>
         </div>
@@ -240,16 +251,21 @@ export default function Contact() {
         <ScrollAnimation delay={0.6}>
           <div className="relative overflow-hidden rounded-3xl">
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600"></div>
-            <div className="absolute inset-0 opacity-20" style={{
-              backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)',
-              backgroundSize: '50px 50px'
-            }}></div>
+            <div
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)",
+                backgroundSize: "50px 50px",
+              }}
+            ></div>
             <div className="relative px-8 py-12 md:px-12 md:py-16 text-center">
               <h3 className="text-3xl md:text-4xl mb-4 text-white font-bold">
                 Cùng xây dựng tương lai AI tại Đà Nẵng
               </h3>
               <p className="text-xl text-cyan-50 mb-8 max-w-2xl mx-auto">
-                Tham gia DAB-Lab ngay hôm nay và trở thành một phần của cuộc cách mạng công nghệ
+                Tham gia DAB-Lab ngay hôm nay và trở thành một phần của cuộc
+                cách mạng công nghệ
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-cyan-600 px-8 py-4 rounded-xl hover:bg-cyan-50 transition text-lg font-semibold">

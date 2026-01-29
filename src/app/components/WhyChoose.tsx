@@ -1,16 +1,19 @@
 import { Shield, DollarSign, Heart, Network } from "lucide-react";
 import ScrollAnimation from "@/app/components/ScrollAnimation";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+import CountUp from "@/components/CountUp";
+import ScrollFloat from "@/components/ScrollFloat";
 
 export default function WhyChoose() {
   const advantages = [
     {
       icon: Shield,
       title: "Chính sách Sandbox",
-      description: "Đà Nẵng đang thí điểm cơ chế đặc thù cho AI, fintech, blockchain",
+      description:
+        "Đà Nẵng đang thí điểm cơ chế đặc thù cho AI, fintech, blockchain",
       color: "from-cyan-500 to-blue-500",
       bgColor: "from-cyan-500/10 to-blue-500/10",
-      borderColor: "border-cyan-500/30"
+      borderColor: "border-cyan-500/30",
     },
     {
       icon: DollarSign,
@@ -18,7 +21,7 @@ export default function WhyChoose() {
       description: "Vận hành thấp hơn 40-50% so với TP.HCM và Hà Nội",
       color: "from-green-500 to-emerald-500",
       bgColor: "from-green-500/10 to-emerald-500/10",
-      borderColor: "border-green-500/30"
+      borderColor: "border-green-500/30",
     },
     {
       icon: Heart,
@@ -26,25 +29,30 @@ export default function WhyChoose() {
       description: "Thành phố đáng sống, thu hút và giữ chân nhân tài tech",
       color: "from-pink-500 to-rose-500",
       bgColor: "from-pink-500/10 to-rose-500/10",
-      borderColor: "border-pink-500/30"
+      borderColor: "border-pink-500/30",
     },
     {
       icon: Network,
       title: "Hệ sinh thái",
-      description: "Kết nối trực tiếp với chính quyền, đại học, và cộng đồng startup",
+      description:
+        "Kết nối trực tiếp với chính quyền, đại học, và cộng đồng startup",
       color: "from-purple-500 to-indigo-500",
       bgColor: "from-purple-500/10 to-indigo-500/10",
-      borderColor: "border-purple-500/30"
-    }
+      borderColor: "border-purple-500/30",
+    },
   ];
 
   return (
     <section id="why" className="py-32 bg-black relative overflow-hidden">
       {/* Background Grid */}
-      <div className="absolute inset-0 opacity-20" style={{
-        backgroundImage: 'linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)',
-        backgroundSize: '100px 100px'
-      }}></div>
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)",
+          backgroundSize: "100px 100px",
+        }}
+      ></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <ScrollAnimation>
@@ -54,10 +62,14 @@ export default function WhyChoose() {
               <span className="text-sm font-medium">Lợi thế cạnh tranh</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl mb-6 text-white">
-              Tại sao chọn <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold">DAB-Lab?</span>
+              Tại sao chọn{" "}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent font-bold">
+                DAB-Lab?
+              </span>
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-              Chúng tôi mang đến những lợi thế độc đáo giúp doanh nghiệp của bạn phát triển nhanh chóng và bền vững
+              Chúng tôi mang đến những lợi thế độc đáo giúp doanh nghiệp của bạn
+              phát triển nhanh chóng và bền vững
             </p>
           </div>
         </ScrollAnimation>
@@ -70,15 +82,25 @@ export default function WhyChoose() {
               <ScrollAnimation key={index} delay={index * 0.1}>
                 <div className={`group relative h-full`}>
                   {/* Glow Effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${advantage.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}></div>
-                  
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-r ${advantage.color} rounded-3xl blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                  ></div>
+
                   {/* Card */}
-                  <div className={`relative h-full bg-gradient-to-br ${advantage.bgColor} backdrop-blur-xl p-8 rounded-3xl border ${advantage.borderColor} hover:border-opacity-60 transition-all duration-300`}>
-                    <div className={`w-16 h-16 bg-gradient-to-br ${advantage.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`relative h-full bg-gradient-to-br ${advantage.bgColor} backdrop-blur-xl p-8 rounded-3xl border ${advantage.borderColor} hover:border-opacity-60 transition-all duration-300`}
+                  >
+                    <div
+                      className={`w-16 h-16 bg-gradient-to-br ${advantage.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
                       <Icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl mb-4 text-white font-semibold">{advantage.title}</h3>
-                    <p className="text-lg text-slate-300 leading-relaxed">{advantage.description}</p>
+                    <h3 className="text-2xl mb-4 text-white font-semibold">
+                      {advantage.title}
+                    </h3>
+                    <p className="text-lg text-slate-300 leading-relaxed">
+                      {advantage.description}
+                    </p>
                   </div>
                 </div>
               </ScrollAnimation>
@@ -91,33 +113,43 @@ export default function WhyChoose() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl md:text-4xl mb-6 text-white">
-                Đà Nẵng - <span className="text-cyan-400">Hub công nghệ năng động</span>
+                Đà Nẵng -{" "}
+                <span className="text-cyan-400">Hub công nghệ năng động</span>
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">Vị trí chiến lược</h4>
+                    <h4 className="text-xl text-white mb-2 font-semibold">
+                      Vị trí chiến lược
+                    </h4>
                     <p className="text-slate-300 leading-relaxed">
-                      Nằm ở trung tâm miền Trung, kết nối dễ dàng với các thành phố lớn và các nước trong khu vực
+                      Nằm ở trung tâm miền Trung, kết nối dễ dàng với các thành
+                      phố lớn và các nước trong khu vực
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">Hạ tầng hiện đại</h4>
+                    <h4 className="text-xl text-white mb-2 font-semibold">
+                      Hạ tầng hiện đại
+                    </h4>
                     <p className="text-slate-300 leading-relaxed">
-                      Trung tâm Phần mềm Đà Nẵng với đầy đủ tiện nghi, kết nối internet tốc độ cao
+                      Trung tâm Phần mềm Đà Nẵng với đầy đủ tiện nghi, kết nối
+                      internet tốc độ cao
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xl text-white mb-2 font-semibold">Nguồn nhân lực chất lượng</h4>
+                    <h4 className="text-xl text-white mb-2 font-semibold">
+                      Nguồn nhân lực chất lượng
+                    </h4>
                     <p className="text-slate-300 leading-relaxed">
-                      Đội ngũ kỹ sư trẻ tài năng từ các trường đại học hàng đầu khu vực
+                      Đội ngũ kỹ sư trẻ tài năng từ các trường đại học hàng đầu
+                      khu vực
                     </p>
                   </div>
                 </div>
@@ -128,7 +160,7 @@ export default function WhyChoose() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-3xl blur-2xl"></div>
               <div className="relative rounded-3xl overflow-hidden border border-cyan-500/30">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1737423808372-37f1f5bcc387?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxEYSUyME5hbmclMjBjaXR5JTIwc2t5bGluZXxlbnwxfHx8fDE3Njk2NDk2OTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="/public/assets/img/bridge.jpg"
                   alt="Da Nang City"
                   className="w-full h-[500px] object-cover"
                 />
@@ -138,7 +170,6 @@ export default function WhyChoose() {
           </div>
         </ScrollAnimation>
 
-        {/* Stats Bar */}
         <ScrollAnimation delay={0.4}>
           <div className="mt-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 border border-cyan-500/30 rounded-3xl p-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -156,7 +187,15 @@ export default function WhyChoose() {
               </div>
               <div className="text-center">
                 <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
-                  100+
+                  <CountUp
+                    from={0}
+                    to={100}
+                    separator=","
+                    direction="up"
+                    duration={2}
+                    className="count-up-text"
+                  />
+                  +
                 </div>
                 <div className="text-slate-300">Doanh nghiệp công nghệ</div>
               </div>
