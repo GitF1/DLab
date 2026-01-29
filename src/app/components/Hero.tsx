@@ -41,7 +41,6 @@ export default function Hero() {
             transition={{ duration: 0.8 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-500/30 text-cyan-400 px-6 py-3 rounded-full mb-8"
           >
-            <Sparkles className="w-5 h-5" />
             <ShinyText
               text="Sắp ra mắt tại Đà Nẵng"
               speed={1.5}

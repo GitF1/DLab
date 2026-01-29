@@ -125,6 +125,13 @@ export default function Gallery({ children, className = "" }: GalleryProps) {
         </div>
 
         {children && (
+          <>
+            <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-black to-transparent z-10 pointer-events-none" />
+           
+          </>
+        )}
+
+        {children && (
           <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
             {children}
           </div>

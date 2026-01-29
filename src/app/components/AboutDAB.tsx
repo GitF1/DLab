@@ -52,9 +52,9 @@ export default function AboutDAB() {
               </span>
             </h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              <span className="text-cyan-400 font-semibold">
+              <div className="text-cyan-400 font-semibold mb-8">
                 DAB-Lab (Da Nang AI & Blockchain Lab)
-              </span>
+              </div>
               <BlurText
                 text="Không gian nghiên cứu và phát triển đặt tại Trung tâm Phần mềm Đà Nẵng — hub công nghệ năng động nhất miền Trung Việt Nam."
                 delay={100}
@@ -63,7 +63,7 @@ export default function AboutDAB() {
                 onAnimationComplete={() => {
                   console.log("Animation completed!");
                 }}
-                className="text-2xl mb-8"
+                className="text-2xl mb-8 text-center"
               />
             </p>
           </div>
