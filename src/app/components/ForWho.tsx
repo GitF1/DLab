@@ -133,9 +133,9 @@ export default function ForWho() {
         </div>
 
         {/* Visual Section with Blockchain Image */}
-        <ScrollAnimation delay={0.2}>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative order-2 lg:order-1">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <ScrollAnimation delay={0.2}>
+            <div className="relative order-2 lg:order-1 transform translate-x-0 transition-all duration-1000 ease-out opacity-100 animate-in slide-in-from-left">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
               <div className="relative rounded-3xl overflow-hidden border border-cyan-500/30">
                 <ImageWithFallback
@@ -154,8 +154,10 @@ export default function ForWho() {
                 </div>
               </div>
             </div>
+          </ScrollAnimation>
 
-            <div className="order-1 lg:order-2">
+          <ScrollAnimation delay={0.4}>
+            <div className="order-1 lg:order-2 transform translate-x-0 transition-all duration-1000 ease-out opacity-100 animate-in slide-in-from-right">
               <h3 className="text-3xl md:text-4xl mb-6 text-white">
                 {t('forWho.ecosystemTitle')}{" "}
                 <span className="text-cyan-400">{t('forWho.ecosystemTitleHighlight')}</span>
@@ -208,8 +210,8 @@ export default function ForWho() {
                 </div>
               </div>
             </div>
-          </div>
-        </ScrollAnimation>
+          </ScrollAnimation>
+        </div>
       </div>
     </section>
   );

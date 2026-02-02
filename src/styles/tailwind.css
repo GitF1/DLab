@@ -224,3 +224,39 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in-from-left {
+    animation: slideInFromLeft 1s ease-out forwards;
+  }
+
+  .slide-in-from-right {
+    animation: slideInFromRight 1s ease-out forwards;
+  }
+
+  .animate-in {
+    animation-fill-mode: both;
+  }
+}
