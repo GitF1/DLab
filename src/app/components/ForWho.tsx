@@ -26,7 +26,7 @@ export default function ForWho() {
       title: t('forWho.targetAudience.2.title'),
       description: t('forWho.targetAudience.2.description'),
       color: "from-purple-500 to-pink-500",
-      image: "/assets/img/beach.jpg",
+      image: "/assets/img/InternationalTeam.jpeg",
       benefits: t('forWho.targetAudience.2.benefits', { returnObjects: true }) as string[],
     },
     {
@@ -139,9 +139,9 @@ export default function ForWho() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-3xl blur-2xl"></div>
               <div className="relative rounded-3xl overflow-hidden border border-cyan-500/30">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1627253781598-63b98c51da42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxibG9ja2NoYWluJTIwY3J5cHRvJTIwbW9kZXJufGVufDF8fHx8MTc2OTY0OTY5Mnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                  src="assets/img/BL-AI.jpeg"
                   alt="Blockchain Technology"
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[500px] object-cover "
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                 <div className="absolute bottom-8 left-8 right-8">
