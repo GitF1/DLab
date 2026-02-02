@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import { Languages, Check, ChevronDown } from 'lucide-react';
+import { Check, ChevronDown , Globe} from 'lucide-react';
 
 export default function LanguageSwitcher() {
   const { i18n } = useTranslation();
@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-slate-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-slate-800/50"
       >
-        <Languages className="h-5 w-5" />
+        <Globe className="h-5 w-5" />
         <span className="hidden sm:flex items-center gap-1">
           {currentLanguage?.flag} {currentLanguage?.name}
           <ChevronDown className="h-4 w-4" />
